@@ -44,7 +44,7 @@ function getShowIntro(e) {
   if (e.target.classList.contains("intro-btn")) {
     let showItem = e.target.parentElement.parentElement;
     console.log(showItem.dataset.id);
-    fetch(`http://api.tvmaze.com/shows/${showItem.dataset.id}`)
+    fetch(`https://api.tvmaze.com/shows/${showItem.dataset.id}`)
       .then((response) => response.json())
       .then((data) => showIntroModal(data));
   }
